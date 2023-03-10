@@ -11,3 +11,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+
+
+/************************************/
+
+
+.mainDesign {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: rgb(219, 219, 219);
+}
+
+.appContainer {
+  background-color: rgb(26, 221, 58);
+  display: flex;
+  flex-direction: column;
+  padding: 25px 50px;
+  border-radius: 10px;
+}
+
+
+.scoreDesign {
+  display: flex;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 900;
+}
+
+.questionStatusContainer {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.questionTxt {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+
+.btnContainerDesign {
+  padding: 10px 10px;
+}
+
+
+.btnDesign {
+  margin: 10px 10px;
+  padding: 10px;
+  cursor: pointer;
+}

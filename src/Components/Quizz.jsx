@@ -58,29 +58,34 @@ const Quizz = () => {
   };
 
   return (
-    <>
-      {showScore ? (
-        <div>
-          You Scored {score} out of {questions.length}
-        </div>
-      ) : (
-        <>
-          <div>
+    <div className="mainDesign">
+      <div className="appContainer">
+        {showScore ? (
+          <div className="scoreDesign">
+            You Scored {score} out of {questions.length}
+          </div>
+        ) : (
+          <>
             <div>
-              <span>Question {currentquestion + 1}</span>/ {questions.length}
+              <div className="questionStatusContainer">
+                <span className="questionStatus">Question {currentquestion + 1}</span>/ {questions.length}
+              </div>
+              <div className="questionTxt">{questions[currentquestion].questionText}</div>
             </div>
-            <div>{questions[currentquestion].questionText}</div>
-          </div>
-          <div>
-            {questions[currentquestion].answerOptions.map((eachAnswer) => (
-              <button onClick={() => handleClick(eachAnswer.isCorrect)}>
-                {eachAnswer.answerText}
-              </button>
-            ))}
-          </div>
-        </>
-      )}
-    </>
+            <div className="btnContainerDesign">
+              {questions[currentquestion].answerOptions.map((eachAnswer) => (
+                <button
+                  className="btnDesign"
+                  onClick={() => handleClick(eachAnswer.isCorrect)}
+                >
+                  {eachAnswer.answerText}
+                </button>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </div>
   );
 };
 
